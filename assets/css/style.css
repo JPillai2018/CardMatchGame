@@ -1,0 +1,255 @@
+body{
+    overflow: hidden;
+}
+
+#images{
+    max-width: 1080px;
+    /*width: 1080px;*/
+    /*overflow-y: auto;*/
+    border-width: 2px;
+    padding: 2px;
+    background-color: #0c0c0c;
+}
+img{
+    float: left;
+}
+
+.cardImg{
+    float: left;
+}
+/* Navigation Bar Styling */
+.navbar-header{
+    background-color: rgba(220, 220, 220, 0.815) ;
+    /* background-color:  rgba(14, 13, 13, 0.815); */
+    /* background-color:  rgba(14, 13, 13, 0.815); */
+    color: brown;
+}
+
+.container-fluid{
+    color: goldenrod;
+    background-color:  rgba(220, 220, 220, 0.815);
+    background-color:  rgba(14, 13, 13, 0.815);
+    margin-left: 25%;
+    margin-right: 25%;
+}
+
+.navbar-brand{
+    /*color:rgb(201, 16, 16); */
+    color: goldenrod;
+    /*background-color:  rgba(220, 220, 220, 0.815);*/
+    background-color:  rgba(14, 13, 13, 0.815);
+    font-family: "BenchNine" sans-serif; 
+}
+.navbar-brand span{
+    /* background-color: darkcyan; */
+    /*color:rgb(201, 16, 16);*/
+    color:rgb(201, 16, 16);
+    color: goldenrod;
+}
+.navbar-brand span:hover{
+    /* background-color: darkcyan; */
+    color: rgb(57, 9, 134);
+}
+.navbar-default{
+    /* background-color: rgba(220, 220, 220, 0.815); */
+    background-color:  rgba(14, 13, 13, 0.815);
+    color: brown;
+    color: goldenrod;
+    font-size: 1em;
+}
+.navbar-toggle{
+    color: black;
+    background-color: rgba(220, 220, 220, 0.815);
+    background-color:  rgba(14, 13, 13, 0.815);
+}
+.navbar-nav{
+    color: aquamarine;
+    /* font-family: Georgia, 'Times New Roman', Times, serif; */
+    font-family: "BenchNine" sans-serif; 
+    color: gold;
+    padding: 0px;
+    margin: 0px;
+}
+.navbar-nav li:hover{
+    /* color: #ffffff; */
+    color: rgb(80, 134, 9);
+    background: #4e4e4e;
+    transform: scale(1.25);
+}
+.icon-bar{
+    color: black;
+}
+
+/********************/
+/*Jumbotron Styling */
+/********************/
+.jumbotron{
+    color: goldenrod;
+    background-color: rgb(14, 15, 15);
+    font-family: 'Sorts Mill Goudy', serif;
+    font-style: normal;
+    font-stretch: expanded;
+    font-size: 5ep;
+    text-align: center;
+}
+.jumbotron .jumbo-theme{
+    /* background-image: url("../images/fruits3.jpg"); */
+    background-blend-mode: screen;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    background-size: unset;
+}
+/*Footer Styling */
+/********************/
+/*Jumbotron Styling */
+/********************/
+.footer {
+    position: fixed;
+    color: goldenrod;
+    /* bottom: 0;
+    width: 100%; */
+    height: 60px; /* Set the fixed height of the footer here */
+    line-height: 60px; /* Vertically center the text there */
+    bottom: 0;
+    width: 100%;
+    height: 60px; /* Set the fixed height of the footer here */
+    line-height: 60px; /* Vertically center the text there */
+    background-color: #f5f5f5;
+    background-color: rgb(14, 15, 15);
+    text-align: center;
+  }
+  /* Footer Styling */
+  /* Custom page CSS */
+  body{
+      width:auto;
+  }
+  .col-md-12 {
+      background-color: #eeeeee;
+  }
+
+  .timetable {
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    background-color: rgb(8, 8, 8);
+    background-color: silver;
+    color: #f5f5f5;
+    color: goldenrod;
+    /* padding: 10px 10px 10px 10px; */
+    border-radius: 10px;
+    /*border: 2px solid #cbcbcb; */
+    box-shadow: 10px 15px 5px #777;
+    /*float: right; */
+  }
+
+   .statustable{
+    width: 100%;
+    height: 500px;
+    margin: 0 auto;
+    background-color: rgb(8, 8, 8);
+    color: #f5f5f5;
+    color: goldenrod;
+    /* padding: 10px 10px 10px 10px; */
+    border-radius: 10px;
+    border: 2px solid #cbcbcb;
+    box-shadow: 10px 15px 5px #777;
+    overflow: scroll;
+    overflow-x: hidden;
+  }
+
+
+  .search-field{
+    height: 40px;
+    padding: 5px;
+    margin: 5px;
+    color: gold;
+    background-color: #4e4e4e;
+    background-color: rgb(8, 8, 8);
+    font-size: 2ch;
+
+  }
+  #checked{
+    margin-left: 35px;
+    width: 100px;
+    color: gold;
+    background-color: rgb(8, 8, 8);
+  }
+  .buttongifs{
+    float: left;
+    }
+
+  #imageGif{
+      width: 200px;
+      height: 200px;
+      float: left;
+  }
+  #img_Div{
+      width: fit-content;
+      height: fit-content;
+      border-style: double;
+      border-color: rgb(20, 24, 24);
+      border-width: thin;
+      padding: 2px;
+      margin: 5px;
+      float: left;
+  }
+
+  .imgitm{
+      float: left;
+      width: 480;
+      height: 480;
+      margin: 1px;
+      padding: 1px;
+      border: rgb(0, 255, 106);
+
+  }
+  .buttongroup{
+      align-items: left;
+      float: left;
+  }
+
+  table td{
+      padding: 25px;
+      border: 5px solid black;
+  }
+
+  table {
+      margin: auto;
+  }
+
+  .btn{
+    width: 420px;
+    padding: 10px;
+    margin: 5px 5px 5px 5px;
+  }
+
+
+  .buttonGroup{
+      float: left;
+  }
+
+  
+  .btn-primary{
+      width: 170px;
+      height: 40px;
+      color: gold;
+      background-color: #0c0c0c;
+      border-bottom-style: outset;
+      border-color: aqua;
+  }
+
+  .buttongifs{
+      min-width: 60px;
+      min-height: 40px;
+  }
+
+  #btn{
+    min-width: 60px;
+    min-height: 40px;
+    background-color: #0c0c0c;
+    border-bottom-style: outset;
+    border-color: aqua;
+  }

@@ -1,0 +1,246 @@
+.container{
+    background-color: black;
+    border-radius: 10px;
+    box-shadow: 10px 15px 5px #777;
+    min-height: 450px;
+    padding: 20px;
+    max-width: 680px;
+    max-height: 100%;
+}
+a{
+    color: rgb(107, 5, 10);
+}
+#title0 h3 {
+    background-color:silver;
+    color: rgb(107, 5, 10);
+    height: 20px;
+    text-align: center;
+    font-size: 2ch;
+}
+
+#title1 h3 {
+    background-color:silver;
+    color: rgb(107, 5, 10);
+    height: 20px;
+    text-align: center;
+    font-size: 2ch;
+}
+
+#title2 h3 {
+    background-color:silver;
+    color: rgb(107, 5, 10);
+    height: 20px;
+    text-align: center;
+    font-size: 2ch;
+}
+#title3 h3 {
+    background-color:silver;
+    color: rgb(107, 5, 10);
+    height: 20px;
+    text-align: center;
+    font-size: 2ch;
+}
+#message{
+    text-align: center;
+    color: azure;
+    font-size: 1em;
+}
+hr{
+    border: 0px;
+}
+/* h3{
+    color: rgb(107, 5, 10);
+    background-color: rgb(230, 179, 117);
+    text-align: center;
+} */
+
+.col-md-12{
+    height: 100%;
+}
+#bttnS{
+    width: 40px;
+    height: 40px;
+    background-image: url('../images/Spade.jpg');
+    background-size: 100%;
+}
+#bttnH{
+    width: 40px;
+    height: 40px;
+    background-image: url('../images/Hearts.jpg');
+    background-size: 100%;
+}
+#bttnD{
+    width: 40px;
+    height: 40px;
+    background-image: url('../images/Diamond.jpg');
+    background-size: 100%;
+}
+#bttnC{
+    width: 40px;
+    height: 40px;
+    background-image: url('../images/Clover.jpg');
+    background-size: 100%;
+}
+#bttnA{
+    width: 40px;
+    height: 40px;
+    background-size: 100%;
+    background-color: gold;
+    color: rgb(107, 5, 10);
+    font-weight: 400;
+    font-size: medium;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+#bttnK{
+    width: 40px;
+    height: 40px;
+    background-image: url('../images/Kings.jpg');
+    background-size: 100%;
+}
+#bttnQ{
+    width: 40px;
+    height: 40px;
+    background-image: url('../images/Queen.jpg');
+    background-size: 100%;
+}
+#bttnJ{
+    width: 40px;
+    height: 40px;
+    background-image: url('../images/Jack.jpg');
+    background-size: 100%;
+}
+#bttn10{
+    width: 40px;
+    height: 40px;
+    background-size: 100%;
+    background-color: gold;
+    color: rgb(107, 5, 10);
+    font-weight: 400;
+    font-size: medium;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+#bttn9{
+    width: 40px;
+    height: 40px;
+    background-color: silver;
+    color: rgb(107, 5, 10);
+    font-weight: 400;
+    font-size: medium;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+#bttn8{
+    width: 40px;
+    height: 40px;
+    background-color: silver;
+    color: rgb(107, 5, 10);
+    font-weight: 400;
+    font-size: medium;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+#bttn7{
+    width: 40px;
+    height: 40px;
+    background-color: silver;
+    color: rgb(107, 5, 10);
+    font-weight: 400;
+    font-size: medium;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+#bttn6{
+    width: 40px;
+    height: 40px;
+    background-color: silver;
+    color: rgb(107, 5, 10);
+    font-weight: 400;
+    font-size: medium;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+#bttn5{
+    width: 40px;
+    height: 40px;
+    background-color: silver;
+    color: rgb(107, 5, 10);
+    font-weight: 400;
+    font-size: medium;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+#bttn4{
+    width: 40px;
+    height: 40px;
+    background-color: silver;
+    color: rgb(107, 5, 10);
+    font-weight: 400;
+    font-size: medium;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+#bttn3{
+    width: 40px;
+    height: 40px;
+    background-color: silver;
+    color: rgb(107, 5, 10);
+    font-weight: 400;
+    font-size: medium;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+#bttn2{
+    width: 40px;
+    height: 40px;
+    background-color: silver;
+    color: rgb(107, 5, 10);
+    font-weight: 400;
+    font-size: medium;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.buttongroup1{
+    padding: 2px;
+    align-content: center;
+    align-items: center;
+}
+.buttongroup2{
+    padding: 2px;
+}
+.buttongroup3{
+    padding: 2px;
+}
+.buttongroup4{
+    height: 30px;
+    padding: 10px 0 10px 0;
+    border-radius: 5px;
+}
+
+.btnStart{
+    border-radius: 5px;
+    width: 200px;
+    height: 40px;
+}
+
+.drawCard{
+    border-radius: 5px;
+    width: 200px;
+    height: 40px;
+    float: none;
+    display: inline-block;
+}
+.imagePcards{
+    display: inline-block;
+}
+
+#images{
+    clear: both;
+    display: inline-block;
+    margin: 0px;
+    padding: 0px;
+    background-color: black;
+}
+
+.imgitm{
+    float: left;
+    width: 100;
+    height: 150;
+    margin: 1px;
+    padding: 1px;
+    border: rgb(0, 255, 106);
+}
