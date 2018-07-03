@@ -144,7 +144,7 @@ $(document).ready(function(){
                     $(imageDrawnCards).append(cardImage);
                     //Flipping the player selected cards
                     var imgId = selectedCards[i];
-                    var pURL = 'http://deckofcardsapi.com/static/img/' + imgId + '.png';
+                    var pURL = 'https://deckofcardsapi.com/static/img/' + imgId + '.png';
                     var imagePlayerCards = $("<div class='imgitm' id='" + itm + "'>");
                     $(".imagePCards").append(imagePlayerCards);
                     var cardPImage = $("<img>");
