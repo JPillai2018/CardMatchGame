@@ -4,7 +4,7 @@
     box-shadow: 10px 15px 5px #777;
     min-height: 450px;
     padding: 20px;
-    max-width: 680px;
+    max-width: 1080px;
     max-height: 100%;
 }
 a{
@@ -58,32 +58,32 @@ hr{
     height: 100%;
 }
 #bttnS{
-    width: 40px;
-    height: 40px;
+    width: 55px;
+    height: 55px;
     background-image: url('../images/Spade.jpg');
     background-size: 100%;
 }
 #bttnH{
-    width: 40px;
-    height: 40px;
+    width: 55px;
+    height: 55px;
     background-image: url('../images/Hearts.jpg');
     background-size: 100%;
 }
 #bttnD{
-    width: 40px;
-    height: 40px;
+    width: 55px;
+    height: 55px;
     background-image: url('../images/Diamond.jpg');
     background-size: 100%;
 }
 #bttnC{
-    width: 40px;
-    height: 40px;
+    width: 55px;
+    height: 55px;
     background-image: url('../images/Clover.jpg');
     background-size: 100%;
 }
 #bttnA{
-    width: 40px;
-    height: 40px;
+    width: 55px;
+    height: 55px;
     background-size: 100%;
     background-color: gold;
     color: rgb(107, 5, 10);
@@ -93,26 +93,26 @@ hr{
 }
 
 #bttnK{
-    width: 40px;
-    height: 40px;
+    width: 55px;
+    height: 55px;
     background-image: url('../images/Kings.jpg');
     background-size: 100%;
 }
 #bttnQ{
-    width: 40px;
-    height: 40px;
+    width: 55px;
+    height: 55px;
     background-image: url('../images/Queen.jpg');
     background-size: 100%;
 }
 #bttnJ{
-    width: 40px;
-    height: 40px;
+    width: 55px;
+    height: 55px;
     background-image: url('../images/Jack.jpg');
     background-size: 100%;
 }
 #bttn10{
-    width: 40px;
-    height: 40px;
+    width: 55px;
+    height: 55px;
     background-size: 100%;
     background-color: gold;
     color: rgb(107, 5, 10);
@@ -122,8 +122,8 @@ hr{
 }
 
 #bttn9{
-    width: 40px;
-    height: 40px;
+    width: 55px;
+    height: 55px;
     background-color: silver;
     color: rgb(107, 5, 10);
     font-weight: 400;
@@ -131,8 +131,8 @@ hr{
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 #bttn8{
-    width: 40px;
-    height: 40px;
+    width: 55px;
+    height: 55px;
     background-color: silver;
     color: rgb(107, 5, 10);
     font-weight: 400;
@@ -140,8 +140,8 @@ hr{
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 #bttn7{
-    width: 40px;
-    height: 40px;
+    width: 55px;
+    height: 55px;
     background-color: silver;
     color: rgb(107, 5, 10);
     font-weight: 400;
@@ -149,8 +149,8 @@ hr{
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 #bttn6{
-    width: 40px;
-    height: 40px;
+    width: 55px;
+    height: 55px;
     background-color: silver;
     color: rgb(107, 5, 10);
     font-weight: 400;
@@ -158,8 +158,8 @@ hr{
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 #bttn5{
-    width: 40px;
-    height: 40px;
+    width: 55px;
+    height: 55px;
     background-color: silver;
     color: rgb(107, 5, 10);
     font-weight: 400;
@@ -167,8 +167,8 @@ hr{
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 #bttn4{
-    width: 40px;
-    height: 40px;
+    width: 55px;
+    height: 55px;
     background-color: silver;
     color: rgb(107, 5, 10);
     font-weight: 400;
@@ -176,8 +176,8 @@ hr{
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 #bttn3{
-    width: 40px;
-    height: 40px;
+    width: 55px;
+    height: 55px;
     background-color: silver;
     color: rgb(107, 5, 10);
     font-weight: 400;
@@ -185,8 +185,8 @@ hr{
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 #bttn2{
-    width: 40px;
-    height: 40px;
+    width: 55px;
+    height: 55px;
     background-color: silver;
     color: rgb(107, 5, 10);
     font-weight: 400;

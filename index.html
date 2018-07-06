@@ -24,56 +24,49 @@
         <body >
                 <!-- Main Body of the Page-->
                 <div class="container">
-                                <div id="title0"><h3><a><b>Card Matching Game!!!</b></a></h3></div>
-                                <hr>
-                                <!--  Player Selected Cards will be placed here-->
-                                <div id="title1"><h3><a>Selected Cards(row1) &amp; Drawn Cards(row2)</a></h3>
-                                        <div id="images" class="col-md-12 side-bar statustable" >
-                                                <div id="image_PCards" class="imagePCards">
-                                                </div>
-                                        </div>                                
-                                </div>
-
-                                <!--  Game Selected Cards will be placed here-->
-                                <div id="title2"><h3><a>Drawn Cards</a></h3>
-                                        <div id="images" >
-                                                <div id="image_Cards" class="imageCards">
-                                                </div>
-                                        </div>                               
-                                </div>
-                                <hr>
-                                <!-- Button Group. First button group is for Card Suites. Second group for value cards. -->
-                                <!-- Third group of buttons are Game control buttons -->
-                                <div id="title3">
-                                        <h3><a>Select the Card number</a></h3>
-                                        <div class="buttongroup1">
-                                        <button id="bttnS"  type="button" onclick="$(this.id, 'S')" value="S" class="btn btn-primary"></button>
-                                        <button id="bttnH"  type="button" onclick="$(this.id, 'S')" class="btn btn-primary"></button>
-                                        <button id="bttnD"  type="button" onclick="$(this.id, 'S')" class="btn btn-primary"></button>
-                                        <button id="bttnC"  type="button" onclick="$(this.id, 'S')" class="btn btn-primary"></button>
-                                        <label id="message"></label>
-                                        </div>    
-                                        <div class="buttongroup2">
-                                        <button id="bttnA"  type="button" onclick="$(this.id, 'S')" class="btn btn-primary">A</button>
-                                        <button id="bttnK"  type="button" onclick="$(this.id, 'K')" class="btn btn-primary"></button>
-                                        <button id="bttnQ"  type="button" onclick="$(this.id, 'Q')" class="btn btn-primary"></button>
-                                        <button id="bttnJ"  type="button" onclick="$(this.id, 'J')" class="btn btn-primary"></button>
-                                        <button id="bttn10" type="button" onclick="$(this.id, '0')" class="btn btn-primary">10</button>
-                                
-                                        <button id="bttn9"  type="button" onclick="$(this.id, '9')" class="btn btn-primary">9</button>
-                                        <button id="bttn8"  type="button" onclick="$(this.id, '8')" class="btn btn-primary">8</button>
-                                        <button id="bttn7"  type="button" onclick="$(this.id, '7')" class="btn btn-primary">7</button>
-                                        <button id="bttn6"  type="button" onclick="$(this.id, '6')" class="btn btn-primary">6</button>
-                                        <button id="bttn5"  type="button" onclick="$(this.id, '5')" class="btn btn-primary">5</button>
-                                        <button id="bttn4"  type="button" onclick="$(this.id, '4')" class="btn btn-primary">4</button>
-                                        <button id="bttn3"  type="button" onclick="$(this.id, '3')" class="btn btn-primary">3</button>
-                                        <button id="bttn2"  type="button" onclick="$(this.id, '2')" class="btn btn-primary">2</button> 
-                                        </div>
-                                        <div class="buttongroup4">
-                                        <button id="bttnGameStart" type="button"  class="btnStart btn-success">Start the Game</button>
-                                        <button id="bttnDrawCard" type="button"  class="btnStart btn-success">Draw the Card</button>
-                                        </div>                                                   
-                                </div>                                                                
+<!--  Player Selected Cards will be placed here -->
+<div id="title1"><h3><a>Selected Cards</a></h3>
+        <div id="images" class="col-md-12 side-bar statustable">
+          <div id="image_PCards" class="imagePCards"></div>
+        </div>                                
+      </div>
+  <!--  Game Selected Cards will be placed here-->
+      <div id="title2"><h3><a>Drawn Cards</a></h3>
+        <div id="images" >
+          <div id="image_Cards" class="imageCards"></div>
+        </div>                               
+      </div>
+  <hr />
+  <!-- Button Group: First button group is for Card Suites; Second group for value cards; Third button group holds the Game control buttons -->
+      <div id="title3">
+        <h3><a>Select the Card number</a></h3>
+          <div class="buttongroup1">
+            <button id="bttnS"  type="button" onclick="$(this.id, 'S')" value="S" class="btn btn-primary"></button>
+            <button id="bttnH"  type="button" onclick="$(this.id, 'C')" class="btn btn-primary"></button>
+            <button id="bttnD"  type="button" onclick="$(this.id, 'D')" class="btn btn-primary"></button>
+            <button id="bttnC"  type="button" onclick="$(this.id, 'H')" class="btn btn-primary"></button>
+            <label id="message"></label>
+          </div>    
+          <div class="buttongroup2">
+            <button id="bttnA"  type="button" onclick="$(this.id, 'S')" class="btn btn-primary">A</button>
+            <button id="bttnK"  type="button" onclick="$(this.id, 'K')" class="btn btn-primary"></button>
+            <button id="bttnQ"  type="button" onclick="$(this.id, 'Q')" class="btn btn-primary"></button>
+            <button id="bttnJ"  type="button" onclick="$(this.id, 'J')" class="btn btn-primary"></button>
+            <button id="bttn10" type="button" onclick="$(this.id, '0')" class="btn btn-primary">10</button>
+            <button id="bttn9"  type="button" onclick="$(this.id, '9')" class="btn btn-primary">9</button>
+            <button id="bttn8"  type="button" onclick="$(this.id, '8')" class="btn btn-primary">8</button>
+            <button id="bttn7"  type="button" onclick="$(this.id, '7')" class="btn btn-primary">7</button>
+            <button id="bttn6"  type="button" onclick="$(this.id, '6')" class="btn btn-primary">6</button>
+            <button id="bttn5"  type="button" onclick="$(this.id, '5')" class="btn btn-primary">5</button>
+            <button id="bttn4"  type="button" onclick="$(this.id, '4')" class="btn btn-primary">4</button>
+            <button id="bttn3"  type="button" onclick="$(this.id, '3')" class="btn btn-primary">3</button>
+            <button id="bttn2"  type="button" onclick="$(this.id, '2')" class="btn btn-primary">2</button> 
+          </div>
+          <div class="buttongroup3">
+            <button id="bttnGameStart" type="button"  class="btnStart btn-success">Start the Game</button>
+            <button id="bttnDrawCard" type="button"  class="btnStart btn-success">Draw the Card</button>
+          </div>                                                   
+      </div>                                                                        
 
                 </div>
                 <hr>

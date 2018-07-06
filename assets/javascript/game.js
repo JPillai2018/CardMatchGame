@@ -1,6 +1,7 @@
 //A  Simple Card Game
 $(document).ready(function(){
 
+//Game Code begins
         // Golbal variable section begins
         var deckId = "";
         var cardsRemaining = parseInt(52);
@@ -14,14 +15,14 @@ $(document).ready(function(){
         var drawnCards = [];
         drawCardNow = false;
         // Golbal variable section ends
-
-        initialLoad();
         var i=0;
 
         // Initial Load function creates buttons from the array.
         initialLoad();
-        keyboardReset("E");
+        // Getting a new deck of cards. This will return a Deck_Id
         newDeckCards();
+        // Shuffling the selected deck. This will make sure cards are shuffled first time. Otherwise returned cadrs may be of same pattern
+        shuffleCards();
 
         function initialLoad(){
             $("#imgrow1col1").css('background-image', 'url("assets/images/PlayingCard-front2.jpg")');
@@ -31,30 +32,9 @@ $(document).ready(function(){
             document.getElementById("bttnGameStart").disabled = false;  
             document.getElementById("bttnDrawCard").disabled = true;  
             $("#bttnDrawCard").attr("class", "btnStart btn-warning");
-            $("#message").html("Choose you choice of any four cards. Once done, press Draw Cards!");
+            $("#message").html("Choose Your choice of any four cards to Play");
         };
         
-        // Initial Button Reset
-        function keyboardReset(btnRst){
-            var bttnreset = "";
-            for (var i =0; i < 27; i++){
-                var j= i;
-                if (i===0){j = "A"};
-                if (i===1){j = "10"};
-                if (i===10){j = "K"};
-                if (i===11){j = "Q"};
-                if (i===12){j = "J"};
-
-                bttnreset = "bttn" + j;
-                if (btnRst === "E"){
- 
-                }
-                else{
-    
-                }
-            }
-        };
-
         // This function Pulls a Deck of Cards- For this game, we do this first time time. This call returns the Deck Id , which will be sued for subsequent calls.
         function newDeckCards(){
             var queryURL = "https://deckofcardsapi.com/api/deck/new/";
@@ -69,26 +49,27 @@ $(document).ready(function(){
             });
         };
 
-        function gameStart(){
-            // First Step is to shuffle the card once more  
-            $("#message").html("Choose you choice of any four cards. Once done, press Draw Cards!");
-            valuePicked = false;
-            suitePicked = false;
-            selectCount = 0;
-            drawCardNow = false;
-            document.getElementById("bttnDrawCard").disabled = true;  
-            $("#bttnDrawCard").attr("class", "btnStart btn-warning");
-            selectedCards.length = 0;  
-            drawnCards.length = 0;  
-            $(".imageCards").empty();
-            $(".imagePCards").empty();
-            // Shuffle cards before start of the game
-            shuffleCards();
-        };
 
+        
         function shuffleCards(){
-            // shuffle the cards
-            var queryURL = "https://deckofcardsapi.com/api/deck/new/shuffle/?deck_count=1";
+          // Shuffle the cards
+          var queryURL = "https://deckofcardsapi.com/api/deck/new/shuffle/?deck_count=1";
+          var currentDeckId = deckId;
+
+          $.ajax({
+              url: queryURL,
+              method: "GET"
+          })
+            .then(function(response) {
+            // Following code fetches the response from the query
+            deckId = response.deck_id;
+          });
+      };
+
+        function reShuffleCards(){
+            // Re-shuffle the cards
+            var currentDeckId = deckId;
+            var queryURL = "https://deckofcardsapi.com/api/deck/" + currentDeckId + "/shuffle/";
 
             $.ajax({
                 url: queryURL,
@@ -100,13 +81,10 @@ $(document).ready(function(){
             });
         };
 
+        // Drawing 4 Cards randomly from the deck.
         function drawACard(){
+            reShuffleCards();
 
-            // Drawing a card randomly
-            //https://deckofcardsapi.com/api/deck/<<deck_id>>/draw/?count=2
-
-            // Sorting existing selected Cards array
-            selectedCards.sort();  
             drawnCards = [];
             var currentDeckId = deckId;
             var countToDraw = countDraw;
@@ -118,14 +96,10 @@ $(document).ready(function(){
                 url: queryURL,
                 method: "GET"
                 }).then(function(response) {
-
                 var count = response.cards.length;
-                // Create CODE HERE to Log the queryURL
-
                 var k = 1;
                 $(".imagePCards").empty();
                 for (var i= 0; i < response.cards.length; i++){
-
                     var itm = "itm" + k;
                     k++;
                     drawnCards.push(response.cards[i].code);
@@ -157,15 +131,48 @@ $(document).ready(function(){
 
                   document.getElementById("bttnDrawCard").disabled = true; 
                   $("#bttnDrawCard").attr("class", "btnStart btn-warning");
-                  drawnCards.sort();
-                  if (selectedCards === drawnCards){
+                  //drawnCards.sort();
+
+                  drawnCards.length = 0;
+
+                  var cardsMatchFound = true;
+                  if (selectedCards.length !== drawnCards.length){
+                    cardsMatchFound = false;
+                  }
+                  else{
+                      for (var k = 0; k < drawnCards.length; k++){
+                        if (selectedCards[k] !== drawnCards[k]){
+                          cardsMatchFound = false;
+                        }
+                      }
+                  }
+                  if (cardsMatchFound === true){
                       $("#message").html("You Won!!!");
                   }
                   else{
-                    $("#message").html("Sorry!. Try again!!!");
+                    $("#message").html("Sorry! No match this time. Try again!!!");
                   }
             });
         };
+
+        // Game Start Function- This function does necessary house keeping before a fresh game. 
+        // Also reshuffles the deck.
+        function gameStart(){
+          // First Step is to shuffle the card once more  
+          $("#message").html("Choose Your choice of any four cards to Play.");
+          valuePicked = false;
+          suitePicked = false;
+          selectCount = 0;
+          drawCardNow = false;
+          document.getElementById("bttnDrawCard").disabled = true;  
+          $("#bttnDrawCard").attr("class", "btnStart btn-warning");
+          selectedCards.length = 0;  
+          drawnCards.length = 0;  
+          $(".imageCards").empty();
+          $(".imagePCards").empty();
+          // Shuffle cards before start of the game
+          reShuffleCards();
+      };
 
     // Button click logic
     $("#bttnGameStart").on("click", gameStart);
@@ -209,6 +216,7 @@ $(document).ready(function(){
                     cardPImage.attr({"height": "200"});
                     $(imagePlayerCards).append(cardPImage);
                     selectedCards.push(cardValue + cardSuite);
+                    $("#message").html("Choose three more cards to Play.");
                 }
                 if (selectCount === 2){
                     itm = "itm" + selectCount;
@@ -225,6 +233,7 @@ $(document).ready(function(){
                     cardPImage.attr({"height": "200"});
                     $(imagePlayerCards).append(cardPImage);
                     selectedCards.push(cardValue + cardSuite);
+                    $("#message").html("Choose two more cards to Play.");
                 }
                 if (selectCount === 3){
                     itm = "itm" + selectCount;
@@ -241,6 +250,7 @@ $(document).ready(function(){
                     cardPImage.attr({"height": "200"});
                     $(imagePlayerCards).append(cardPImage);
                     selectedCards.push(cardValue + cardSuite);
+                    $("#message").html("Choose one more card to Play.");
                 }
                 if (selectCount === 4){
                     itm = "itm" + selectCount;
@@ -262,11 +272,13 @@ $(document).ready(function(){
                     document.getElementById("bttnDrawCard").disabled = false;  
                     $("#bttnDrawCard").attr("class", "btnStart btn-success");
                     $(this.id).css('color', 'red');
+                    $("#message").html("Press Draw the Card Button now.");
                 }
             }
         }
 
    });
+//Game code ends
 });
 
 
