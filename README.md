@@ -1,4 +1,4 @@
-# CardMatchingGame
+# CardMatchingGame using multiple APIs.
 This is a simple card matching game
 Idea is to let the player choose any four cards
 Then draw four cards from the deck
